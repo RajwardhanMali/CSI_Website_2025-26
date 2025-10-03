@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSI VIT Pune - Footer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .content {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .footer {
+      background: linear-gradient(to top, #0d0d0d, #151515);
+      padding: 3rem 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Watermark text */
+    .footer-watermark {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(2rem, 8vw, 5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      background: linear-gradient(90deg, rgba(251, 191, 36, 0.15), rgba(249, 115, 22, 0.15));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: normal; 
+      z-index: 0;
+      pointer-events: none;
+      text-align: center;
+      max-width: 90%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .footer-watermark img {
+      display: block;
+      margin: 0 auto 1rem;
+      height: 60px;
+      max-width: 100%;
+      opacity: 0.3;
+    }
+
+    @media (min-width: 992px) {
+      .footer-watermark img {
+        height: 100px;
+      }
+    }
+
+    .footer-watermark1 {
+      font-size: clamp(1.2rem, 4vw, 3rem);
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      gap: 6rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 300px;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+
+    .footer-heading {
+      color: #7B3F00;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      position: relative;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .footer-heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 50px;
+      height: 3px;
+      background-color: #7B3F00;
+      border-radius: 2px;
+    }
+
+    .contact-info {
+      list-style: none;
+      line-height: 1.8;
+    }
+
+    .contact-info li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: flex-start;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-info li:hover {
+      transform: translateX(5px);
+    }
+
+    .contact-info i {
+      color: #7B3F00;
+      margin-right: 12px;
+      margin-top: 5px;
+      font-size: 1.1rem;
+    }
+
+    .footer-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 18px;
+      margin-left: 9rem; 
+    }
+
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: #252525;
+      border-radius: 50%;
+      color: #f5f5f5;
+      font-size: 1.4rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-icon::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #7B3F00, #ff6b00);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: -1;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-5px) scale(1.1);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(123, 63, 0, 0.4);
+    }
+
+    .social-icon:hover::before {
+      opacity: 1;
+    }
+
+    /* Collaborate button */
+    .collaborate-link {
+      background: linear-gradient(45deg, #7B3F00, #ff6b00);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 10px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      width: fit-content;
+      transition: all 0.3s ease;
+      z-index: 2;
+      position: relative;
+      overflow: hidden;
+      margin-right: 8rem; 
+    }
+
+    .collaborate-link:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 0 8px #ff6b00, 0 0 30px rgba(123, 63, 0, 0.6);
+    }
+
+    .collaborate-link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.5), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.6s ease;
+    }
+
+    .collaborate-link:hover::before {
+      left: 125%;
+    }
+
+    .collaborate-link i {
+      margin-left: 8px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 1.5rem auto 0;
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid #333;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tagline {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #f1f1f1;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .copyright {
+      color: #ddd;
+      font-size: 0.95rem;
+      font-weight: 400;
+    }
+
+    .quick-links {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .quick-links li {
+      margin-bottom: 0.8rem;
+    }
+
+    .quick-links a {
+      color: #ccc;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .quick-links a:hover {
+      color: #7B3F00;
+      transform: translateX(5px);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .footer-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .footer-section {
+        flex: 0 0 45%;
+        text-align: center;
+      }
+
+      .footer-actions {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .social-links {
+        margin-left: 0;
+      }
+
+      .collaborate-link {
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-section {
+        flex: 0 0 100%;
+      }
+
+      .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .contact-info li {
+        justify-content: center;
+      }
+
+      .footer-watermark {
+        font-size: 2.5rem;
+      }
+
+      .footer-watermark1 {
+        font-size: 1.2rem;
+      }
+
+      .collaborate-link {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+      }
+    }
+
+    .scroll-animation {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .scroll-animation.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>CSI VIT Pune Chapter</h1>
+    <p>Main content of the website</p>
+  </div>
+
+  <footer class="footer">
+    <!-- watermark -->
+    <div class="footer-watermark">
+      <img src="logo.png" alt="CSI Logo">
+      Computer Society of India
+      <div class="footer-watermark1">Building What Matters</div>
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-section scroll-animation">
+        <h3 class="footer-heading">About CSI</h3>
+        <p>The Computer Society of India is a body of computer professionals that aims to advance the theory and practice of computer science and technology.</p>
+      </div>
+
+      <div class="footer-section scroll-animation delay-1">
+        <h3 class="footer-heading">Contact Us</h3>
+        <ul class="contact-info">
+          <li><i class="fas fa-envelope"></i><span>csivitpunechapter@vit.edu</span></li>
+          <li><i class="fas fa-map-marker-alt"></i><span>Vishwakarma Institute of Technology,<br>Upper Indira Nagar, Bibwewadi,<br>Pune, India 411037</span></li>
+          <li><i class="fas fa-phone-alt"></i><span>+91 XXXXXXXXXX</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-section scroll-animation delay-2">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="quick-links">
+          <li><a href="#">Upcoming Events</a></li>
+          <li><a href="#">Past Events</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Team</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social + Collaborate on same line -->
+    <div class="footer-actions scroll-animation delay-1">
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <a href="https://example.com/collaborate" class="collaborate-link scroll-animation">
+        Let's Collaborate!<i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="tagline">Made by CSI Web Development Team</p>
+      <p class="copyright">© <span id="current-year">2023</span> Computer Society of India VIT Pune Chapter. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    function checkScroll() {
+      const elements = document.querySelectorAll('.scroll-animation');
+      const windowHeight = window.innerHeight;
+
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect().top;
+        if (position < windowHeight - 100) {
+          element.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('load', checkScroll);
+    window.addEventListener('scroll', checkScroll);
+  </script>
+</body>
+</html>
