@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 
-export default async function Home() {
+export default async function CatchAllPage() {
   try {
     // Read the index.html file from public directory
     const indexPath = join(process.cwd(), 'public', 'index.html');
