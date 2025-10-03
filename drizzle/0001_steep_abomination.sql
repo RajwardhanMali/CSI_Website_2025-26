@@ -1,0 +1,1 @@
+ALTER TABLE "volunteers" DROP CONSTRAINT "volunteers_email_unique";
