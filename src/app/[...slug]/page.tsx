@@ -3,7 +3,6 @@ import { join } from 'path';
 
 export default async function CatchAllPage() {
   try {
-    // Read the index.html file from public directory
     const indexPath = join(process.cwd(), 'public', 'index.html');
     const indexHtml = await readFile(indexPath, 'utf8');
     
